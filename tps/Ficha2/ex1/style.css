@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap");
+
+html {
+    font-family: 'Crimson Pro', serif;
+    /*entre aspas porque contém um espaço - seirf são pequenos traços adicionados às letras, torna mais formal*/
+    /*define a família de fontes a ser utilizada pelos elementos html*/
+    font-size: 2rem;
+    /*2x o tamanho da fonte padrão*/
+    color: #333;
+    /*cinza escuro, acho que se tirar esta linha vai dar ao  mesmo*/
+}
+
+body>header,
+/*seleciona o elemento header, filho direto do body  - a vírgula separa diferentes seletores, permitindo aplicar as mesmas regras de estilo a múltiplos elementos*/
+article.recipe {
+    /*seleciona os elementos article com a classe recipe*/
+    width: 30em;
+    max-width: 90vw;
+    /*90% da largura da viewport*/
+    margin: 0 auto;
+    /*margem superior e inferior igual a 0 e margens laterais auto, distribuindo o espaço disponível igualmente entre as margens, centralizando assim o elemeento*/
+    /*o height é automático de acordo com o width, acho que não é boa prática de programação, escolher um valor fixo para height*/
+}
+
+body>header {
+    font-family: 'Imperial Script', serif;
+    /*entre aspas porque contém um espaço*/
+    text-align: center;
+    /*centraliza o texto presente no header*/
+}
+
+body>header>h1 {
+    /*todos filhos direstos uns dos outros logo utiliza-se o operador >*/
+    font-size: 6em;
+    font-weight: 400;
+    /*tem a ver com bold, negrito i guess*/
+    margin: 0;
+    /*elimina qualquer espaço adicional ao redor do elemento, garante que não há margens padrão aplicadas pelo navegador*/
+}
+
+article.recipe {
+    background-color: #f7ede2;
+    /*define a cor beje de fundo da receita*/
+    padding: 1em;
+    /*cria o preenchimento do retangulo para nao ficar o texto logo no começo*/
+}
+
+article.recipe h2 {
+    /*estiliza os elementos h2 que estão dentro de elementos article com classe recipe (subtítulos)*/
+    font-family: 'Ruda', sans-serif; /*sem a cena do serif*/
+    /* não é necessário aspas mas podiamos meter na mesma*/
+    font-weight: 400;
+    /*fonte de peso normal*/
+    border-bottom: 2px solid #333;
+    /*adiciona uma borda (linha horizontal) na parte inferior dos elementos h2, com espessura de 2 píxeis, sólida e de cor #333*/
+    text-align: right;
+    /*alinha o texto dentro dos elementos h2 à direita*/
+}
+
+article.recipe header dl {
+    /*estiliza a definition list que está dentro do header, que estão dentro de elementos article com classe recipe*/
+    border: 2px dashed #f28482;
+    /*adiciona borda de 2 pixeis com estilo tracejado e a cor vermelha*/
+    border-right: 10px solid #f28482;
+    /*adiciona uma borda sólida à direita dos elementos com 10pixeis*/
+    border-radius: 20px 0 0 20px;
+    /* seleciona bordas arredondadas para o canto superior esquerdo e canto inferior esqeurdo, a ordem é a dos ponteiros dos relógio a começar no canto superior esquerdo*/
+    background-color: #f5cac3;
+    padding: 0 1em;
+    /*espaçamento interno de 0 pixels na parte superior e inferior 1 em nas laterais dos elementos*/
+}
+
+article.recipe header dt {
+    /*estiliza os elementops dt - por exemplo - prep time, cook time, etc */
+    text-transform: capitalize;
+    /*primeira letra de cada palavra é maiúscula*/
+    font-variant-caps: small-caps;
+    /*maiúsculas mas menores*/
+    margin-top: 0.5em;
+    /*adiciona uma margem superior aos elementos dt*/
+}
+
+article.recipe header dd {
+    /*estiliza as definições*/
+    margin-left: 0;
+    /*faz com que não exista parágrafo, não há margem na esquerda*/
+    margin-bottom: 0.5em;
+    /*margem em baixo dos elementos dd, não faz nada aos que estão em cima pois já têm a margem dos dt*/
+}
+
+p {
+    line-height: 1.4em;
+    /*espaçamento entre as linhas dos elementos p*/
+}
+
+em {
+    /*elementos emphatized*/
+    background-color: transparent;
+    /*não é necessário mas é para garantir que os elementos não estragam a cor do fundo*/
+    font-weight: bold;
+    /*negrito */
+    color: #84a59d;
+}
+
+section.description img {
+    /*seleciona as imagens que estão presentes na secção description*/
+    width: 100%;
+    /*garante que preenche sempre a coluna inteira*/
+}
+
+section.ingredients p {
+    /*seleciona "for the sauce: e for the sandwich*/
+    font-weight: bold;
+}
+
+section.method li,
+section.ingredients li {
+    /*seleciona todos os pontinhos de lista*/
+    margin-bottom: 1em;
+    /*espaçamentos entre os pontinhos*/
+}
