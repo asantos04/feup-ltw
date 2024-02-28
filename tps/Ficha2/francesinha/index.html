@@ -50,62 +50,76 @@
                 </p>
             </section>
             <section class="ingredients">
-                <header>
+                <header> <!-- não é necessário adicionar este header-->
                     <h2>Ingredients</h2>
                 </header>
                 <p>For the sauce:</p>
                 <ul> <!-- unordered list-->
-                    <li><em>olive oil</em> as needed</li>
-                    <!-- 'li' significa list item e 'em' significa emphasis para depois ser mais fácil selecionar todos os que estão 'emphasis' para efetuar o estilo -->
-                    <li>1 sliced <em>onion</em></li>
-                    <li>2 <em>garlic</em> cloves</li>
-                    <li>1 <em>bay leaf</em></li>
-                    <li>1 slice of <em>ham</em></li>
-                    <li>1 can of diced <em>tomatoes</em></li>
-                    <li>1/2 liter of <em>beer</em></li>
-                    <li>1/2 liter of <em>white wine</em></li>
-                    <li>1/2 liter of <em>water</em></li>
-                    <li>1 <em>beef bouillon cube</em></li>
-                    <li><em>salt</em> as needed</li>
-                    <li><em>Worcestershire sauce</em> as needede</li>
-                    <li>1 tsp of <em>cornstarch</em></li>
-                    <li>1/4 cup of <em>milk</em></li>
+                    <li><span class="ingredient">olive oil</span> as needed</li>
+                    <!-- 'li' significa list item -->
+                    <!-- utilizou-se o span com a class ingredient (e não o em como tava antes) para depois selecionar todos os elementos e colocar bold no css.
+                    Com o 'em' tava errado, o correto é o span que significa que é algo vazio ig-->
+                    <li>1 sliced <span class="ingredient">onion</span></li>
+                    <li>2 <span class="ingredient">garlic</span> cloves</li>
+                    <li>1 <span class="ingredient">bay leaf</span></li>
+                    <li>1 slice of <span class="ingredient">ham</span></li>
+                    <li>1 can of diced <span class="ingredient">tomatoes</span></li>
+                    <li>1/2 liter of <span class="ingredient">beer</span></li>
+                    <li>1/2 liter of <span class="ingredient">white wine</span></li>
+                    <li>1/2 liter of <span class="ingredient">water</span></li>
+                    <li>1 <span class="ingredient">beef bouillon cube</span></li>
+                    <li><span class="ingredient">salt</span> as needed</li>
+                    <li><span class="ingredient">Worcestershire sauce</span> as needede</li>
+                    <li>1 tsp of <span class="ingredient">cornstarch</span></li>
+                    <li>1/4 cup of <span class="ingredient">milk</span></li>
                 </ul>
                 <p>For the sandwich:</p>
                 <ul>
-                    <li>4 <em>beef tenderloin steaks</em></li>
-                    <li>4 <em>fresh sausages</em></li>
-                    <li>4 <em>linguica sausages</em></li>
-                    <li>8 slices of <em>crustless sanwich bread</em></li>
-                    <li>16 slcies of <em>cheese</em></li>
-                    <li>8 slices of <em>ham</em></li>
+                    <li>4 <span class="ingredient">beef tenderloin steaks</span></li>
+                    <li>4 <span class="ingredient">fresh sausages</span></li>
+                    <li>4 <span class="ingredient">linguica sausages</span></li>
+                    <li>8 slices of <span class="ingredient">crustless sanwich bread</span></li>
+                    <li>16 slcies of <span class="ingredient">cheese</span></li>
+                    <li>8 slices of <span class="ingredient">ham</span></li>
                 </ul>
             </section>
             <section class="method">
-                <header>
+                <header> <!-- não é necessário adicionar este header-->
                     <h2>Method</h2>
                 </header>
                 <ol> <!-- ordered list-->
-                    <li>In <em>olive oil</em>, sauté the <em>onion</em>. As soon as it is translucent, add the
-                        <em>garlic</em>.
+                    <li>In <span class="ingredient">olive oil</span>, sauté the <span class="ingredient">onion</span>.
+                        As soon as it is translucent, add the
+                        <span class="ingredient">garlic</span>.
                     </li>
-                    <li>Let it sauté for a little while, then add the <em>bay leaf</em>, <em>ham</em> and
-                        <em>tomato</em>.
+                    <li>Let it sauté for a little while, then add the <span class="ingredient">bay leaf</span>, <span
+                            class="ingredient">ham</span> and
+                        <span class="ingredient">tomato</span>.
                     </li>
-                    <li>Mix well and add <em>beer</em>, <em>wine</em> and <em>water</em>.</li>
-                    <li>Season with <em>bouillon stock</em>, <em>salt</em>, and <em>Worcestershire sauce</em> and let it
+                    <li>Mix well and add <span class="ingredient">beer</span>, <span class="ingredient">wine</span> and
+                        <span class="ingredient">water</span>.</li>
+                    <li>Season with <span class="ingredient">bouillon stock</span>, <span
+                            class="ingredient">salt</span>, and <span class="ingredient">Worcestershire sauce</span> and
+                        let it
                         simmer on low heat for about half an hour.</li>
-                    <li>Remove the <em>bay leaf</em> and puree the sauce until it becomes very smooth.</li>
-                    <li>Dissolve the <em>cornstarch</em> in the <em>milk</em> and add it to the sauce, stirring and
+                    <li>Remove the <span class="ingredient">bay leaf</span> and puree the sauce until it becomes very
+                        smooth.</li>
+                    <li>Dissolve the <span class="ingredient">cornstarch</span> in the <span
+                            class="ingredient">milk</span> and add it to the sauce, stirring and
                         letting it cook for a little while.</li>
                     <li>Preheat the oven to 180ºC.</li>
-                    <li>Meanwhile, grill the <em>steaks</em>, previously seasoned with <em>salt</em> and
-                        <em>pepper</em>, <em>sausages</em>, and <em>linguica</em>, cut in half lengthwise.
+                    <li>Meanwhile, grill the <span class="ingredient">steaks</span>, previously seasoned with <span
+                            class="ingredient">salt</span> and
+                        <span class="ingredient">pepper</span>, <span class="ingredient">sausages</span>, and <span
+                            class="ingredient">linguica</span>, cut in half lengthwise.
                     </li>
-                    <li>In an oven tray, place 4 slices of <em>sandwich bread</em>, and on top of it, place the
-                        <em>steak</em>, <em>sausages</em>, and <em>ham</em>. Cover with another slice of <em>sandwich
-                            bread</em>. Cover with 4 slices of <em>cheese</em>. Place the tray in th oven until the
-                        <em>cheese</em> is melted.
+                    <li>In an oven tray, place 4 slices of <span class="ingredient">sandwich bread</span>, and on top of
+                        it, place the
+                        <span class="ingredient">steak</span>, <span class="ingredient">sausages</span>, and <span
+                            class="ingredient">ham</span>. Cover with another slice of <span class="ingredient">sandwich
+                            bread</span>. Cover with 4 slices of <span class="ingredient">cheese</span>. Place the tray
+                        in th oven until the
+                        <span class="ingredient">cheese</span> is melted.
                     </li>
                     <li>Remove from the oven, place each francesinha on a plate, and pour the hot sauce over it.</li>
                 </ol>
@@ -113,6 +127,7 @@
         </article>
     </main>
     <footer>
+        <!-- não era preciso colocar o footer-->
         <!-- não há footer-->
     </footer>
 </body>
