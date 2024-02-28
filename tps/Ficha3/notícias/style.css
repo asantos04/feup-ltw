@@ -1,0 +1,244 @@
+/* header */
+
+body>header {
+    background-color: #046DD5;
+    color: white;
+    padding: 1em;
+}
+
+body>header h1,
+body>header h2 {
+    margin: 0;
+    /*remove o espaço entre os elementos do header*/
+}
+
+body>header a {
+    /*seleciona os links do header*/
+    color: white;
+    /*mete os links a branco que inicialmente estavam a azul*/
+    text-decoration: none;
+    /*remove o sublinhado que os links têm*/
+}
+
+body>header #signup a:first-child {
+    /*seleciona o primeiro link (a) dentro do signup, ou seja, seleciona o register*/
+    border-right: 1px solid white;
+    /*cria a barrinha vertical*/
+}
+
+body>header #signup {
+    margin-top: 1em;
+    /*cria a margem de cima do signup*/
+}
+
+body>header #signup a {
+    padding: 0 1em;
+    /*0 padding for top and bottom and 1em left and right, faz com que a barrinha esteja a separar o register e login*/
+}
+
+body>header #signup a:first-child {
+    padding-left: 0;
+    /*corrige o espaço que foi criado em cima à esquerda do primeiro elemento*/
+}
+
+/* navigation */
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    background-color: white;
+    text-align: center;
+
+    list-style-type: none;
+    /*remove os pontinhos da lista default*/
+
+    padding: 1em 0;
+}
+
+#menu li a {
+    /*seleciona os links do menu*/
+    color: black;
+    text-decoration: none;
+    /*tira o sublinhado dos links*/
+}
+
+#menu li:hover {
+    /*define as cenas para quando o curso está sobre a cena selecionada*/
+    background-color: #2a2f33;
+}
+
+#menu li:hover a {
+    color: white;
+}
+
+#hamburger,
+.hamburger {
+    /*seleciona os elementos com id hamburguer e class hamburguer*/
+    display: none;
+    /*hide those elements*/
+}
+
+/* article */
+
+#news header {
+    max-width: 10em;
+    /*define o comprimento máximo e faz com que fique mais compacto -> haja mais colunas*/
+    padding: 1em;
+    position: absolute;
+    /* para ser metido dentro da imagem, ancestor ig*/
+}
+
+#news header h1 {
+    margin: 0;
+    /*remove a margem de cima*/
+
+    text-shadow: .2em .2em .2em black;
+    /*The shadow is offset by 0.2em horizontally and 0.2em vertically, with a blur radius of 0.2em. The shadow color is black*/
+}
+
+#news header a {
+    color: white;
+    text-decoration: none;
+}
+
+#news img {
+    width: 100%;
+    /*mete a imagem a preencher o comprimento todo*/
+}
+
+#news>article {
+    background-color: white;
+
+    margin: 1em 0;
+    /*margem top e bottom*/
+}
+
+#news>article>p {
+    padding: 0 1em;
+    /*padding nos parágrafos*/
+}
+
+#news>article>p:first-of-type:first-letter {
+    /*primeira letra do primeiro parágrafo*/
+    font-size: 2em;
+}
+
+#news footer {
+    color: white;
+    background-color: #f4655f;
+
+    padding: 1em;
+}
+
+#news footer a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    /*cria a barra sólida por baixo das palavras com espessura de 1px*/
+    padding-bottom: 2px;
+    /*mete a barra do link mais para baixo*/
+}
+
+#news footer .tags {
+    /*seleciona os #'s*/
+    margin-right: 1em;
+}
+
+#news footer .comments {
+    margin-left: 1em;
+}
+
+#news footer .comments:after {
+    content: ' comments';
+    /*adiciona a palavra comments*/
+}
+
+#news footer .author:before {
+    content: "By ";
+}
+
+/* related */
+
+#related {
+    background-color: #2a2f33;
+
+    padding: 1em;
+}
+
+#related h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+#related p {
+    color: white;
+}
+
+/* footer */
+
+body>footer {
+    background-color: #2a2f33;
+    color: white;
+
+    padding: 1em;
+
+    height: 1em;
+    /*não percebo o que é que isto faz*/
+}
+
+body>footer p {
+    margin: 0;
+}
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Poppins:400,700');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+p {
+    font-family: "Lora", serif;
+    line-height: 1.4em;
+}
+
+body > header h2 {
+    font-weight: normal; /*tira o sublinhado do subtitulo*/
+  }
+
+  #news header {
+    font-size: 1.5em;
+  }
+  #news footer {
+    font-size: 0.8em;
+  }
+
+  /* section colors */
+
+  #menu li:nth-child(1) { /*seleciona o primeiro elemento da lista*/
+    border-top: 5px solid #e1493e;
+  }
+  
+  #menu li:nth-child(2) {
+    border-top: 5px solid #8aba56;
+  }
+  
+  #menu li:nth-child(3) {
+    border-top: 5px solid #5b4282;
+  }
+  
+  #menu li:nth-child(4) {
+    border-top: 5px solid #ff8932;
+  }
+  
+  #menu li:nth-child(5) {
+    border-top: 5px solid #19b6e9;
+  }
+  
+  #menu li:nth-child(6) {
+    border-top: 5px solid #e84c8b;
+  }
