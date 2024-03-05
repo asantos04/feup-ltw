@@ -1,0 +1,102 @@
+/* main layout */
+body {
+    background-color: #edeff0;
+
+    margin: 0 auto;
+    /*sets the top and bottom margins to 0 and horizontally centers the element by setting the left and right margins to "auto."*/
+    width: 60em;
+    /*enunciado*/
+
+    display: grid;
+    /*display the body element as a grid*/
+    /*In web development, a grid is a layout system that allows you to create a two-dimensional structure for organizing content on a webpage. It's a way to divide a page into rows and columns, creating a framework that makes it easier to design and align elements.*/
+    grid-template-columns: [start] 4fr [middle] 1fr [end];
+    /*o começo ocupa quatro frações do comprimento da página, a do meio ocupa 1fr e é a aba lateral e a do fim ocupa o restante da grid.*/
+    grid-template-rows: [start] auto [nav] auto [news] 1fr [footer] auto [end];
+
+}
+
+body>header {
+    grid-column: start / end;
+    /*basicamente significa que o título deve ocupar a dimensão toda da página, desde a coluna de começo à coluna final*/
+}
+
+#menu {
+    grid-column: start;
+    /*menu na primeira coluna*/
+}
+
+
+aside {
+    /*seleciona a cena que está de lado*/
+    grid-column: middle;
+    /*é a do meio pois ainda à uma final*/
+    grid-row: nav / end;
+    /*vai desde a parte da nav (menu) até ao fim da página em termos de altura*/
+}
+
+#news {
+    grid-column: start;
+    /*na mesma posição que o menu*/
+}
+
+body>footer {
+    align-self: end;
+    /*acho que isto não faz nada pois align-self é uma propriedade de flex box e o footer nem o body são flex boxes*/
+}
+
+/* header layout */
+
+body>header {
+    display: grid;
+    /*header vai utilizar grid layout*/
+    grid-template-columns: 1fr auto;
+    /*2 colunas, a primeira tira 1 fração do espaço disponível e a segunda ajusta o seu tamanho de acordo*/
+    grid-template-rows: auto auto;
+    /*determinado pelo conteúdo de cada row*/
+}
+
+body>header h1 {
+    grid-column: 1;
+    /*mete o titulo na primeira coluna*/
+    grid-row: 1;
+    /*na primeira linha*/
+}
+
+body>header h2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+body>header #signup {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* navigation layout */
+
+#menu ul {
+    display: flex;
+    /*indica que a cena do menu vai ser uma flexbox*/
+    flex-direction: row;
+    /*indica que quer as cenas organizadas pela row*/
+}
+
+#menu li {
+    display: block;
+    /*garante que os elementos li se comportam como blocos (tipo caixas que ocupam o espaço todo do container, da esquerda para a direita, acho que não era necessário neste caso pois os elementos li são blocks por default*/
+    flex: 1;
+    /*propriedade da flexbox (equivalente a flex-grow: 1, flex-shrink: 1, flex-basis: 0%) It means that each list item will grow to fill the available space equally, distributing it among all the list items.*/
+}
+
+/* article footer layout */
+
+#news footer {
+    display: flex;
+    /*indica que o footer de cada notícia é um flexbox*/
+}
+
+#news footer .author {
+    flex-grow: 1;
+    /*mete o autor a ocupar o espaço disponível, logo os outros elementos vão para a direita*/
+}
