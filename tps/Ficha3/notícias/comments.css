@@ -1,0 +1,110 @@
+#comments {
+    margin: 1em;
+    /*basicamente faz o parágrafo*/
+}
+
+#comments .user {
+    /*seleciona o username, podemos ver isto dentro do ficheiro item.html*/
+    font-style: italic;
+}
+
+#comments .user:after {
+    /*seleciona o texto a seguir ao user*/
+    font-style: normal;
+    /*mete esse texto sem ser em itálico*/
+    content: ' said:';
+}
+
+
+#comments .date {
+    float: right;
+    /*causes the selected elements to be floated to the right within their containing element*/
+}
+
+#comments p {
+    background-color: #edeff0;
+    padding: 1em;
+}
+
+#comments p:before {
+    /*antes do parágrafo*/
+    content: '\201C';
+    font-size: 3em;
+    position: relative;
+    /*meaning that the top and left properties will be relative to the normal flow*/
+    top: 15px;
+    /*positions the inserted content 15 pixels down from its normal position*/
+    color: #ccc;
+}
+
+#comments form {
+    display: grid;
+    /*grid para o form dos comments*/
+
+    padding: 1em;
+    gap: 1em;
+    /*gap entre items da grid*/
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*4 colunas, cada uma com uma fração igual de espaço ocupado*/
+
+    background-color: #edeff0;
+}
+
+#comments form h2 {
+    font-size: 1em;
+    grid-column-end: span 4;
+    /*o h2 deve ocupar as 4 colunas, ou seja, ir da esquerda até à direita*/
+}
+
+#comments form input {
+    /*seleciona as caixas de input do username e do email*/
+    background-color: white;
+    height: 2em;
+    /*aumenta a altura das boxes*/
+}
+
+#comments form textarea {
+    display: block;
+    /*block-level elements start on a new line and take up the full width available*/
+    width: 100%;
+    /*it ensures that the textarea spans the entire width of its container*/
+
+    margin: 0 auto;
+    /*this centers the textarea horizontally within its container by setting the left and right margins to autor*/
+    padding: 0;
+    /*it ensures that there is no extra space between the content and the border of the textarea*/
+
+    height: 6em;
+}
+
+#comments form label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /*a primeira coluna conterá o texto do rótulo, e a segunda coluna conterá os campos de entrada associados (como os campos de texto e a área de texto)*/
+    grid-column-end: span 2;
+    /*a label ocupa as duas colunas, ou seja, vai da esquerda até à direita*/
+    gap: 1em;
+    /*gap entre os dois elementos*/
+    align-items: center;
+    /*this centers the content of the label element vertically within its grid container*/
+}
+
+#comments form label:last-of-type {
+    /*último elemento label que é filho do form, ou seja, vai ser o botão*/
+    grid-column-end: span 4;
+    /*vai ocupar as 4 colunas por isso vai surgir numa row nova*/
+    grid-template-columns: auto 1fr;
+}
+
+#comments form button {
+    width: auto;
+
+    grid-column-start: 4;
+
+    background-color: black;
+    color: white;
+
+    border: none;
+    padding: 1em;
+}
