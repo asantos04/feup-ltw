@@ -1,0 +1,150 @@
+/* responsive */
+
+@media (max-width: 60em) {
+
+    /*media query in CSS, which applies styles only when the maximum width of the viewport is 60em  - janela reduzida*/
+    body {
+        width: 100%;
+        /*body will take the full witdh of the viewport*/
+        grid-template-columns: [start] 4fr [end];
+        /*o aside de lado já não vai existir portanto só vai existir a coluna de começo que ocupa 4fr e a coluna de fim*/
+        grid-template-rows: [start] auto [nav] auto [news] auto [footer] auto [end];
+        /*basicamente faz o mesmo que estava lo layout.css*/
+    }
+
+    #news article {
+        margin: 0 0 1em;
+        /* 0 nas margens superior e direita, 1em na margem inferior e 0 na margem esquerda */
+    }
+
+    #related {
+        display: none;
+        /*remove a aba lateral*/
+    }
+
+    body>footer {
+        margin: 0.15em 0 0 0;
+        /*remove as margens todas do footer menos a de cima*/
+    }
+}
+
+@media (max-width: 30em) {
+
+    /*media query in CSS, which applies styles only when the maximum width of the viewport is 60em  - sobretudo mobile*/
+    body>header {
+        display: block;
+        /*acho que é redundante, uma vez que os headers já são blocks por default*/
+    }
+
+    body>header h2 {
+        display: none;
+        /*remove o subtítulo*/
+    }
+
+    body>header h1 {
+        font-size: 1.5em;
+    }
+
+    #menu .hamburger {
+        /*vai fazer a barrinha preta do responsive menu*/
+        display: block;
+        /*Block-level elements stack on top of each other vertically, and they typically take up the full width of their container*/
+        background-color: #2a2f33;
+        color: white;
+        padding: 1em;
+        /* é o correto?*/
+    }
+
+    #menu .hamburger:before {
+        /*vai inserir a barrinha antes do menu em si*/
+        content: '\2630';
+    }
+
+    #menu ul {
+        flex-direction: column;
+        /*mete o display das cenas do menu em formato vertical*/
+        margin: 0;
+        padding: 0;
+        color: white;
+        /*redundante ig*/
+    }
+
+    #hamburger:checked+.hamburger+ul li {
+        /*seleciona os elementos li quando a checkbox do hamburguer é selecionada*/
+        max-height: 1em;
+        padding: 1em;
+        opacity: 1;
+        /*makes the items fully visible*/
+    }
+
+    #menu li {
+        max-height: 0;
+        /*serve para esconder os elementos da lista*/
+        padding: 0 1em;
+        /*0 top and bottom and 1em left and rigth*/
+        background-color: #edeff0;
+        text-align: left;
+        /*aligns the text within the list items to the left*/
+        opacity: 0;
+        /*os items no início são fully transparentes*/
+        transition: all .3s ease-in-out;
+        /*applies a CSS transition to all properties over a duration of 0.3 seconds, using an ease-in-out timing function. This transition is likely used to animate changes in height, padding, background color, text alignment, and opacity, creating a smooth visual effect when the properties change*/
+        /*in summary, these styles are commonly used in combination to create a hidden or collapsed menu. When triggered, the menu items will transition from being hidden (with zero height and zero opacity) to being fully visible and styled with the specified properties. The transition effect provides a smooth animation when the menu items are revealed or hidden*/
+    }
+
+
+    #hamburger:checked+.hamburger:before {
+        /*vai mudar o conteúdo do hamburguer before para uma cruz, caso o mesmo seja selecionado*/
+        content: '\2715';
+    }
+
+    /*vai tirar a borda de cima para todos os elementos li e meter a borda na esquerda*/
+    #menu li:nth-child(1) {
+        border-top: none;
+        border-left: 5px solid #e1493e;
+    }
+
+    #menu li:nth-child(2) {
+        border-top: none;
+        border-left: 5px solid #8aba56;
+    }
+
+    #menu li:nth-child(3) {
+        border-top: none;
+        border-left: 5px solid #5b4282;
+    }
+
+    #menu li:nth-child(4) {
+        border-top: none;
+        border-left: 5px solid #ff8932;
+    }
+
+    #menu li:nth-child(5) {
+        border-top: none;
+        border-left: 5px solid #19b6e9;
+    }
+
+    #menu li:nth-child(6) {
+        border-top: none;
+        border-left: 5px solid #e84c8b;
+    }
+
+    #news header {
+        color: black;
+        max-width: 100%;
+        /*this ensures that the header does not exceed the width of its container*/
+        font-size: 1em;
+        padding: 1em;
+        position: static;
+        /*static é o posicionamento default, logo vai sair da imagem e vai ser posicionado de acordo com o flow normal do documento html, logo, em cima da imagem*/
+        /*não vai ser afetado por propriedades como top, bottom, right or bottom*/
+    }
+
+    #news header h1 {
+        text-shadow: none;
+    }
+
+    #news header a {
+        color: black;
+    }
+}
